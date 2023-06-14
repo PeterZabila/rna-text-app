@@ -10,7 +10,7 @@ const Registration = ({ navigation }) => {
   const passwordHandler = (text) => setPassword(text);
   const onRegister = () => {
       Alert.alert("Credentials", `${name} + ${password}`);
-      navigation.navigate("Home");
+      
   }
 
   return (
@@ -36,10 +36,10 @@ const Registration = ({ navigation }) => {
                   style={styles.input}
                 />
               </KeyboardAvoidingView>
-              <Button title={"Login"} style={styles.input} onPress={onLogin}/>
+              <Button title={"Login"} style={styles.input} onPress={onRegister}/>
               <Button 
-                title="Go to Home"
-                onPress={() => navigation.navigate("Home")}
+                title="Login"
+                onPress={() => navigation.navigate("Login")}
               />
         
         </View>

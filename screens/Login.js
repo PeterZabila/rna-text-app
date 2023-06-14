@@ -8,7 +8,10 @@ const Login = ({ navigation }) => {
     const nameHandler = (text) => setName(text);
     const passwordHandler = (text) => setPassword(text);
     const onLogin = () => {
-      Alert.alert("Credentials", `${name} + ${password}`)
+      Alert.alert("Credentials", `${name} + ${password}`);
+      navigation.navigate("Home", {
+        screen: 'Posts'
+      });
     }
   
     
@@ -37,8 +40,8 @@ const Login = ({ navigation }) => {
               </KeyboardAvoidingView>
               <Button title={"Login"} style={styles.input} onPress={onLogin}/>
               <Button 
-                title="Go to Home"
-                onPress={() => navigation.navigate("Home")}
+                title="Register"
+                onPress={() => navigation.navigate("Registration")}
               />
         
         </View>

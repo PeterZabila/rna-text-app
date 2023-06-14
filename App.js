@@ -10,9 +10,10 @@ const MainStack = createStackNavigator();
 export default function App() {
 
   return (
-    <View style={styles.container}>
+  
       <NavigationContainer>
-          <Image source={{uri: 'https://reactjs.org/logo-og.png'}} style={{width: 150, height: 150, borderRadius: 15, marginBottom: 12}}/>
+        <View style={styles.container}>
+          {/* <Image source={{uri: 'https://reactjs.org/logo-og.png'}} style={{width: 150, height: 150, borderRadius: 15, marginBottom: 12}}/> */}
           <Text style={styles.title}>RNA App</Text>
         
               <MainStack.Navigator initialRouteName="Login">
@@ -20,10 +21,9 @@ export default function App() {
                 <MainStack.Screen name="Login" component={Login}/>
                 <MainStack.Screen name="Home" component={Home}/>
               </MainStack.Navigator>
-              
+            </View>
         </NavigationContainer>
-      </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({

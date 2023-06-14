@@ -2,6 +2,11 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
+import { createStackNavigator } from '@react-navigation/stack';
+
+import { Posts } from './Posts'
+
+const HomeStack = createStackNavigator();
 
 function Settings() {
     return (
@@ -24,6 +29,11 @@ function Settings() {
 const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      <Text>Hello dflsdgdfgdfb</Text>
+      <HomeStack.Navigator initialRouteName='Posts'>
+          <HomeStack.Screen name="Posts" component={Posts}/>
+      </HomeStack.Navigator>
+
         <Tabs.Navigator
             screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
